@@ -16,7 +16,7 @@ var friends = [
         ] 
         
     }, { 
-    name: "Jeff Newman",
+    name: "Jeff Newbarry",
     photo: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?cs=srgb&dl=black-and-white-fun-happy-91227.jpg&fm=jpg",
     scores: [
          "1",
@@ -154,5 +154,7 @@ var friends = [
     ]
 }
 
-
 ]
+
+module.exports = friends;
+
