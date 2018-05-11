@@ -4,6 +4,8 @@
 ### FriendFinder
  
  - A fullstack match making application using Express package for node
+ - link to heroku: https://cryptic-beyond-95899.herokuapp.com/
+ 
  - This app uses Express to serve two static HTML files and two API routes to get and post data
 
 - Note that data is not persistent, but rather stored in an object in friends.js for your current session
