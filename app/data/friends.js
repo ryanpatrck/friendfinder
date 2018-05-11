@@ -109,7 +109,7 @@ var friends = [
 
 }, {
     name: "Owen Wilson",
-    photo: "http://www.media3.hw-static.com/media/2017/12/wenn_owenwilson_122917-1800x1200.jpg",
+    photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/OwenWilsonMay07.jpg/170px-OwenWilsonMay07.jpg",
     scores: [
          "1",
          "1",
