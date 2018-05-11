@@ -11,11 +11,17 @@
  <!-- Font Awesome cdn-->
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
  
-<!--Import Google Icon Font-->
- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
        
 </head>
 <body>
+        <style>
+                body {
+                    background-color: #41B3A3;
+                }
+                .container {
+                    background-color: #E27D60;
+                }
+            </style>
     <div class="container">
         <h2>Survey Questions</h2>
         <hr>
@@ -156,7 +162,7 @@
       <div class="modal-content">
        <div class="modal-header">
          <button type="button" class="close" data-dismiss="modal">&times;</button>
-         <h2 class="col-12 modal-title text-center" id="exampleModalLabel"><strong>Best Match</strong></h2>
+         <h2 class="col-12 text-center modal-title" id="exampleModalLabel"><strong>Best Match</strong></h2>
       </div>
       <div class="modal-body">
         <h2 id="matchName"></h2>
@@ -176,20 +182,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
   
-   //Chosen CSS (jquery for select boxes )
-   //var config = {
-       //".chosen-select": {},
-       //".chosen-select-deselect": { allow_single_deselect: true},
-       //".chosen-select-deselect": { allow_single_deselect: true},
-       //".chosen-select-single": {disable_search_threshold: 10},
-       //".chosen-select-no-results": { no_results_test: "OOPS, NOTHING FOUND!"},
-       //".chosen-select-width": { width:"95%"}
-    //} 
-
-    //for (var selector in config) {
-        //$(selector).chosen(config[selector]);
-    //}
-    
     //Capture the form inputs
     $("#submit").on("click", () =>{
         
@@ -202,6 +194,12 @@
             }
         })
         
+        $(".chosen-select").each( function(){
+            if ($(this).val() === "") {
+                isValid = false;
+            }
+        })
+        return isValid;
       }
 
       // If all required fields are filled out
@@ -234,10 +232,7 @@
                 // Show the modal with the best match
                 $("#myModal").modal("toggle")
             })  
-        } else {
-            alert("Please fill out all fields before submitting!");
-        }
-        return false;
+        } 
        
     })
 </script>
